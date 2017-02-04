@@ -8,7 +8,7 @@ This is a node project.
 ## Quick Start
 ```
 # Clone this repo
-git clone https://github.com/wapbamboogie/bootstrap-4-boilerplate.git
+git clone https://github.com/kinoli/bootstrap-4-boilerplate.git
 # Navigate into the directory
 cd bootstrap-4-boilerplate
 # Install the project's node dependencies
