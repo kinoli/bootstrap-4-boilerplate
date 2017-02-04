@@ -1,6 +1,6 @@
 # Bootstrap 4 boilerplate
 This repository contains the project code for my Bootstrap 4 boilerplate.
-A Bootstrap 4 boiler plate with sass, concatenation, minification, autoprefixer, browser-sync, git vcs and gulp task runner
+A Bootstrap 4 boiler plate with sass, concatenation, minification, autoprefixer, browser-sync, fontello, git vcs and gulp task runner
 
 ## Using this Repo
 This is a node project.

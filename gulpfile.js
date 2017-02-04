@@ -64,11 +64,11 @@ gulp.task('browser-sync', function() {
 });
 
 gulp.task('clean', function() {
-  del(['dist', 'app/lib/css/main.css*', 'app/lib/js/main*.js*']);
+  del(['dist/lib', 'dist/*.html', 'dist/*.txt', 'dist/*.xml', 'dist/.htaccess', 'app/lib/css/main.css*', 'app/lib/js/main*.js*']);
 });
 
 gulp.task('renameSources', function() {
-  return gulp.src('app/index.html')
+  return gulp.src(['app/index.html', 'app/404.html', 'app/robots.txt', 'app/.htaccess', 'app/browserconfig.xml'])
     .pipe(htmlreplace({
         'js': 'lib/js/main.min.js',
         'css': 'lib/css/main.min.css'
@@ -77,8 +77,8 @@ gulp.task('renameSources', function() {
 });
 
 gulp.task("build", ['minifyScripts', 'minifyCss'], function() {
-  return gulp.src(['index.html',
-                   "lib/img/**", "lib/fonts/**"], { base: './'})
+  return gulp.src(['index.html', '404.html', 'robots.txt', '.htaccess', 'browserconfig.xml',
+                   "app/lib/img/**", "app/lib/fonts/**"], { base: './app'})
             .pipe(gulp.dest('dist'));
 });
 
